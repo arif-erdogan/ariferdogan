@@ -1,0 +1,381 @@
+/* Genel Stil Ayarları */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+    color: #333;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+header {
+    background-color: #222;
+    padding: 20px 0;
+    color: #fff;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 36px;
+    margin: 0;
+    letter-spacing: 2px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #f39c12;
+}
+
+nav ul li a.active {
+    color: #f39c12;
+    font-weight: bold;
+}
+
+footer {
+    background-color: #222;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    position: relative; /* Değişiklik yapıldı: fixed yerine relative */
+}
+
+/* Ana Sayfa Stili */
+.homepage {
+    background-image: url('hero-image.jpg'); /* Gerekirse resim yolunu ayarlayın */
+    background-size: cover;
+    background-position: center;
+    height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.homepage h2 {
+    font-size: 48px;
+}
+
+/* Hakkımda ve Projeler */
+.about,
+.projects {
+    padding: 50px 0;
+    text-align: center; /* Metin merkezi */
+}
+
+.about h2,
+.projects h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #f39c12;
+}
+
+.about p,
+.projects p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin: 0 20%; /* Kenar boşlukları eklendi */
+}
+
+/* Projeler Grid */
+.projects .grid {
+    display: flex;
+    flex-wrap: wrap; /* Taşma durumunda satır değişimi */
+    gap: 20px;
+    justify-content: center; /* Merkezi hizalama */
+}
+
+.projects .card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    flex: 1 1 300px; /* Esneklik ve minimum genişlik ayarlandı */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Geçiş efekti */
+}
+
+.projects .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Hover efektleri */
+}
+
+.projects .card h3 {
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.projects .card p {
+    font-size: 16px;
+}
+/* Projeler Stili */
+.projects {
+    padding: 50px 0;
+    text-align: center; /* Metin merkezi */
+}
+
+.projects h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #f39c12;
+}
+
+.project-container {
+    display: flex; /* Flexbox kullanarak kutuları yan yana diz */
+    flex-wrap: wrap; /* Taşma durumunda alt satıra geç */
+    justify-content: center; /* Ortala */
+    gap: 20px; /* Kutular arasında boşluk */
+    max-width: 1200px; /* Maksimum genişlik ayarı */
+    margin: 0 auto; /* Ortala */
+}
+
+.project {
+    background-color: #fff; /* Arka plan rengi */
+    border-radius: 8px; /* Kenar yuvarlama */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Gölge efekti */
+    padding: 20px; /* İç boşluk */
+    width: 250px; /* Her projenin genişliği */
+    transition: transform 0.3s; /* Geçiş efekti */
+}
+
+.project:hover {
+    transform: scale(1.05); /* Hover efekti ile büyüt */
+}
+
+.project h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #333; /* Başlık rengi */
+}
+
+.project p {
+    font-size: 16px;
+    line-height: 1.5; /* Satır yüksekliği */
+    color: #666; /* Yazı rengi */
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .project {
+        width: 100%; /* Küçük ekranlarda tam genişlik */
+        max-width: 300px; /* Maksimum genişlik ayarı */
+    }
+}
+
+
+/* Anket */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 50px 0;
+    max-width: 500px; /* Formun maksimum genişliği */
+    margin: 0 auto; /* Formu ortala */
+}
+
+form input,
+form textarea,
+form button {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+form button {
+    background-color: #f39c12;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+form button:hover {
+    background-color: #e67e22;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    .projects .grid {
+        flex-direction: column; /* Dikey hizalama */
+    }
+
+    .about p,
+    .projects p {
+        margin: 0 10%; /* Daha dar kenar boşluğu */
+    }
+}
+/* Ana Sayfa Stili */
+.homepage {
+    background-image: url('hero-image.jpg'); /* Gerekirse resim yolunu ayarlayın */
+    background-size: cover;
+    background-position: center;
+    height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    text-align: center; /* Metni merkezi hizala */
+    position: relative; /* Gölgeli arka plan için */
+}
+
+.homepage::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5); /* Arka plana yarı saydam bir siyah katman ekle */
+    z-index: 1; /* Metnin üstünde olmasını sağla */
+}
+
+.homepage-content {
+    position: relative; /* İçerik katmanını üstte tut */
+    z-index: 2; /* Arka plan katmanından üstte tut */
+}
+
+.homepage h2 {
+    font-size: 48px;
+    margin-bottom: 15px;
+}
+
+.homepage p {
+    font-size: 20px;
+    max-width: 600px; /* Maksimum genişlik ayarı */
+    margin: 0 auto; /* Ortala */
+    line-height: 1.6; /* Satır yüksekliği */
+}
+
+/* Buton Stili */
+.button {
+    display: inline-block;
+    padding: 12px 25px;
+    background-color: #f39c12;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+}
+
+.button:hover {
+    background-color: #e67e22;
+}
+/* Hakkımda Stili */
+.about {
+    padding: 50px 0;
+    text-align: center; /* Metin merkezi */
+}
+
+.about h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #f39c12;
+}
+
+.about p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin: 0 20%; /* Kenar boşlukları eklendi */
+}
+
+.profile-image {
+    margin: 20px auto; /* Üstten boşluk ve ortalama */
+    width: 100px; /* Genişliği ayarlayın */
+    height: 100px; /* Yüksekliği ayarlayın */
+    overflow: hidden; /* Taşmayı gizle */
+    border-radius: 50%; /* Yuvarlak görünüm */
+    border: 3px solid #f39c12; /* Kenar çizgisi */
+}
+
+.profile-image img {
+    width: 100%; /* Genişliği kapsayacak şekilde ayarlama */
+    height: auto; /* Yüksekliği otomatik ayarlama */
+    display: block; /* Alt boşlukları kaldır */
+    border-radius: 50%; /* Yuvarlak görünüm */
+}
+/* Anket Stili */
+.survey {
+    padding: 50px 0;
+    text-align: center; /* Metin merkezi */
+}
+
+.survey h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #f39c12;
+}
+
+.form-group {
+    margin-bottom: 20px; /* Her grup için alt boşluk */
+    text-align: left; /* Etiketleri sola hizala */
+    max-width: 400px; /* Maksimum genişlik ayarı */
+    margin: 0 auto; /* Ortala */
+}
+
+label {
+    display: block; /* Her etiketi yeni bir satıra koy */
+    margin-bottom: 5px; /* Etiket ile girdi arasında boşluk */
+    font-weight: 500;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%; /* Genişliği doldur */
+    padding: 10px; /* İç boşluk */
+    border: 1px solid #ddd; /* Kenar çizgisi */
+    border-radius: 5px; /* Kenar yuvarlama */
+    font-size: 16px; /* Yazı boyutu */
+}
+
+button {
+    background-color: #f39c12; /* Buton rengi */
+    color: #fff; /* Yazı rengi */
+    padding: 12px 20px; /* İç boşluk */
+    border: none; /* Kenar çizgisi yok */
+    border-radius: 5px; /* Kenar yuvarlama */
+    cursor: pointer; /* Fare imlecini el yap */
+    transition: background-color 0.3s ease; /* Geçiş efekti */
+}
+
+button:hover {
+    background-color: #e67e22; /* Hover rengi */
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .survey {
+        padding: 30px 0; /* Küçük ekranlar için daha az üst-alt boşluk */
+    }
+
+    .form-group {
+        max-width: 100%; /* Küçük ekranlarda maksimum genişliği artır */
+    }
+}

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anket</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Blog Sayfam</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Ana Sayfa</a></li>
+                    <li><a href="hakkimda.html">Hakkımda</a></li>
+                    <li><a href="projeler.html">Projeler</a></li>
+                    <li><a href="anket.html" class="active">Anket</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="survey">
+            <h2>Anket</h2>
+            <form class="form">
+                <div class="form-group">
+                    <label for="name">Adınız:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">E-posta:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="feedback">Geri Bildiriminiz:</label>
+                    <textarea id="feedback" name="feedback" rows="5" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label>Favori Projeniz:</label>
+                    <div>
+                        <input type="radio" id="project1" name="project" value="Çip Tasarımı">
+                        <label for="project1">Çip Tasarımı</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="project2" name="project" value="Model Uydu">
+                        <label for="project2">Model Uydu</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="project3" name="project" value="Robotaksi">
+                        <label for="project3">Robotaksi</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="project4" name="project" value="Engelsiz Yaşam Teknolojileri">
+                        <label for="project4">Engelsiz Yaşam Teknolojileri</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="project5" name="project" value="Finansal Teknolojiler">
+                        <label for="project5">Finansal Teknolojiler</label>
+                    </div>
+                </div>
+                <button type="submit">Gönder</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Blog Sayfam - Tüm Hakları Saklıdır</p>
+    </footer>
+</body>
+</html>
